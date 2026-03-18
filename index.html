@@ -2,187 +2,69 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MAP’promo - Confirmation</title>
+
   <style>
-    :root {
-      --primary: #00868B;
-      --accent: #E11D48;
-      --text: #111827;
-      --muted: #6B7280;
-      --bg: linear-gradient(180deg, #f8fafc 0%, #eef6f7 100%);
-      --card: rgba(255, 255, 255, 0.92);
-      --border: rgba(0, 134, 139, 0.10);
-      --shadow: 0 20px 60px rgba(0, 0, 0, 0.10);
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
-      min-height: 100vh;
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro", sans-serif;
+      background: linear-gradient(135deg, #00868B, #E11D48);
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 24px;
-      overflow: hidden;
-    }
-
-    .background-blur {
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-    }
-
-    .background-blur::before,
-    .background-blur::after {
-      content: "";
-      position: absolute;
-      border-radius: 999px;
-      filter: blur(70px);
-      opacity: 0.16;
-    }
-
-    .background-blur::before {
-      width: 280px;
-      height: 280px;
-      background: var(--primary);
-      top: 8%;
-      left: 8%;
-    }
-
-    .background-blur::after {
-      width: 260px;
-      height: 260px;
-      background: var(--accent);
-      bottom: 10%;
-      right: 10%;
+      height: 100vh;
     }
 
     .card {
-      position: relative;
-      width: 100%;
-      max-width: 540px;
-      background: var(--card);
-      backdrop-filter: blur(14px);
-      border: 1px solid var(--border);
-      border-radius: 28px;
-      box-shadow: var(--shadow);
-      padding: 36px 28px;
+      background: white;
+      padding: 40px 30px;
+      border-radius: 24px;
       text-align: center;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      max-width: 320px;
     }
 
-    .badge {
-      width: 76px;
-      height: 76px;
-      margin: 0 auto 22px;
-      border-radius: 22px;
-      background: linear-gradient(135deg, rgba(0, 134, 139, 0.14), rgba(225, 29, 72, 0.12));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 34px;
-    }
-
-    .brand {
-      display: inline-block;
-      margin-bottom: 12px;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: rgba(0, 134, 139, 0.08);
-      color: var(--primary);
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.02em;
+    .logo {
+      width: 80px;
+      margin-bottom: 20px;
     }
 
     h1 {
-      margin: 0 0 14px;
-      font-size: 32px;
-      line-height: 1.15;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      color: var(--text);
+      font-size: 18px; /* plus petit */
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #111;
     }
 
     .highlight {
-      color: var(--primary);
+      color: #00868B;
     }
 
-    .lead {
-      margin: 0 auto 12px;
-      max-width: 420px;
-      font-size: 17px;
-      line-height: 1.6;
-      color: var(--muted);
-    }
-
-    .note {
-      margin: 18px auto 0;
-      max-width: 420px;
-      padding: 14px 16px;
-      border-radius: 16px;
-      background: rgba(225, 29, 72, 0.06);
-      color: #9f1239;
+    p {
       font-size: 14px;
-      line-height: 1.5;
-      font-weight: 600;
-    }
-
-    .footer {
-      margin-top: 22px;
-      font-size: 13px;
-      color: #94a3b8;
-    }
-
-    @media (max-width: 640px) {
-      .card {
-        padding: 28px 20px;
-        border-radius: 24px;
-      }
-
-      h1 {
-        font-size: 26px;
-      }
-
-      .lead {
-        font-size: 16px;
-      }
+      color: #555;
+      margin: 0;
     }
   </style>
 </head>
+
 <body>
-  <div class="background-blur"></div>
 
-  <main class="card">
-    <div class="badge">✅</div>
+  <div class="card">
 
-    <div class="brand">MAP’promo</div>
+    <!-- LOGO -->
+    <img src="logo.png" class="logo" />
 
     <h1>
       Adresse e-mail <span class="highlight">confirmée</span>
     </h1>
 
-    <p class="lead">
+    <p>
       Votre compte MAP’promo est maintenant activé.
     </p>
 
-    <p class="lead">
-      Vous pouvez maintenant revenir sur l’application pour commencer.
-    </p>
+  </div>
 
-    <div class="note">
-      Si l’application ne s’ouvre pas automatiquement, ouvrez simplement MAP’promo manuellement.
-    </div>
-
-    <div class="footer">
-      Merci et bienvenue sur MAP’promo
-    </div>
-  </main>
 </body>
 </html>
